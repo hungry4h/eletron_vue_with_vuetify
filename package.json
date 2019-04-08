@@ -13,7 +13,9 @@
   },
   "main": "background.js",
   "dependencies": {
+    "pdfjs-dist": "^2.0.943",
     "vue": "^2.6.6",
+    "vue-pdf": "^4.0.6",
     "vue-router": "^3.0.1",
     "vuetify": "^1.5.5"
   },

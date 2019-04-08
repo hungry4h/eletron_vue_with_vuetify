@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Dashboard from './views/Dashboard'
 import Guideline from './views/Guideline'
 import Table from './views/Table'
+import Pdf from './views/Pdf'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/table',
       name: 'table',
       component: Table
+    },
+    {
+      path: '/pdf',
+      name: 'pdf',
+      component: Pdf
     },
   ]
 })

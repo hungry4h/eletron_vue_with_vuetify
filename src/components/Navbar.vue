@@ -31,9 +31,6 @@
                         The Net Ninja
                     </p>
                 </v-flex>
-                <v-flex class="mt-4 mb-3">
-                    <Popup />
-                </v-flex>
             </v-layout>
             <v-list>
                 <v-list-tile v-for="link in links" :key="link.id" router :to="link.route">
@@ -54,17 +51,15 @@
 </template>
 
 <script>
-import Popup from './Popup'
-
 export default {
-    components: { Popup },
     data() {
         return {
             drawer : false,
             links : [
                 { id: 0, icon: 'dashboard', text: "Dashboard", route: '/' },
                 { id: 1, icon: 'folder', text: "Guideline", route: '/guideline' },
-                { id: 2, icon: 'person', text: "Table", route: '/table' }
+                { id: 2, icon: 'person', text: "Table", route: '/table' },
+                { id: 3, icon: 'book', text: "Pdf", route: '/pdf' }
             ]
         }
     }

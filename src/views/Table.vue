@@ -1,5 +1,7 @@
 <template>
     <div class="table">
+        <h1 class="subheading grey--text">Table</h1>
+
         <v-container>
             <v-data-table
                 :headers="headers"
