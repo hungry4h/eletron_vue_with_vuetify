@@ -1,13 +1,13 @@
 <template>
   <div class="pdf-paginator">
     <template v-if="pageCount">
-      <input
-        :value="value"
-        @input="input"
-        min="1"
-        :max="pageCount"
-        type="number"
-        /> / <span>{{ pageCount }}</span>
+        <input
+          :value="value"
+          @input="input"
+          min="1"
+          :max="pageCount"
+          type="number"
+        ><span class="slash">/</span><span class="ma-4 page-count">{{ pageCount }}</span>
     </template>
     <input v-else type="number" />
   </div>
@@ -36,13 +36,11 @@ export default {
 }
 </script>
 
-<style>
-.pdf-paginator {
-  color: white;
-  font-weight: bold;
+<style scoped>
+input {
+  background-color: aliceblue;
 }
-.pdf-paginator input {
-  width: 2em;
-  padding: 0.3em;
+.page-count, .slash {
+  color: white;
 }
 </style>

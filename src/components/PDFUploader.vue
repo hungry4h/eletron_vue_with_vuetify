@@ -86,38 +86,5 @@ export default {
 </script>
 
 <style scoped>
-.form {
-  display: block;
-}
-span,
-label {
-  color: white;
-  font-weight: bold;
-  margin-left: 0.5em;
-}
-input {
-  width: 15em;
-}
-.error {
-  border: 1px solid red;
-  background: pink;
-  color: red;
-  padding: 0.5em 3em;
-  display: inline;
-}
-button {
-  display: inline;
-  padding: 0.5em;
-  font-size: 1em;
-}
-a.btn {
-  display: inline;
-  padding: 0.5em 3em;
-  background: rgb(54, 114, 160);
-  border: 1px solid white;
-  text-decoration: none;
-  border-radius: 3px;
-  color: white;
-  font-weight: bold;
-}
+
 </style>

@@ -50,8 +50,6 @@
 </template>
 
 <script>
-import PreviewIcon from '../assets/icon-preview.svg';
-
 import PDFDocument from './PDFDocument';
 import PDFData from './PDFData';
 import PDFPaginator from './PDFPaginator';
@@ -72,7 +70,6 @@ export default {
     PDFPaginator,
     PDFPreview,
     PDFZoom,
-    PreviewIcon,
   },
 
   props: {

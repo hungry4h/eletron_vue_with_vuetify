@@ -1,23 +1,27 @@
 <template>
-  <div class="dashboard">
-        <h1 class="subheading grey--text">Pdf Viewer</h1>
-
-        <v-container class="my-5">
+  
+    <div class="pdfviewer">
+      <v-container wrap>
+        <v-flex>
           <PDFViewer
             v-bind="{url}"
             @document-errored="onDocumentErrored"
             >
-            <PDFUploader
-              v-if="enableUploader"
-              :documentError="documentError"
-              @updated="urlUpdated"
-              slot="header"
-              class="header-item"
-              />
+            
+              <PDFUploader
+                v-if="enableUploader"
+                :documentError="documentError"
+                @updated="urlUpdated"
+                slot="header"
+                class="header-item"
+                />
+          
           </PDFViewer>
-        </v-container>
+        </v-flex>
+      </v-container>
+    </div>
+
     
-  </div>
 </template>
 
 <script>
@@ -49,5 +53,10 @@ export default {
 </script>
 
 <style>
-
+.pdfviewer {
+  background-color: blue;
+}
+.container {
+  padding:0;
+}
 </style>
