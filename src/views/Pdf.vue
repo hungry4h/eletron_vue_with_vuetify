@@ -1,13 +1,53 @@
 <template>
-  <pdf src="/pdf.pdf"></pdf>
+  <div class="dashboard">
+        <h1 class="subheading grey--text">Pdf Viewer</h1>
+
+        <v-container class="my-5">
+          <PDFViewer
+            v-bind="{url}"
+            @document-errored="onDocumentErrored"
+            >
+            <PDFUploader
+              v-if="enableUploader"
+              :documentError="documentError"
+              @updated="urlUpdated"
+              slot="header"
+              class="header-item"
+              />
+          </PDFViewer>
+        </v-container>
+    
+  </div>
 </template>
 
 <script>
-import pdf from 'vue-pdf'
-
+import PDFUploader from '../components/PDFUploader.vue'
+import PDFViewer from '../components/PDFViewer.vue'
 export default {
+  name: 'app',
   components: {
-    pdf
-  }
+    PDFUploader,
+    PDFViewer,
+  },
+  data() {
+    return {
+      url: "/pdf.pdf",
+      documentError: undefined,
+      enableUploader: process.env.VUE_APP_UPLOAD_ENABLED === 'true',
+    };
+  },
+  methods: {
+    urlUpdated(url) {
+      this.documentError = undefined;
+      this.url = url;
+    },
+    onDocumentErrored(e) {
+      this.documentError = e.text;
+    },
+  },
 }
 </script>
+
+<style>
+
+</style>
