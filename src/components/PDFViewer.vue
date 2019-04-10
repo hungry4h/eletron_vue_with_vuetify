@@ -1,8 +1,14 @@
 <template>
   <div class="pdf-viewer">
+
+    <div class="text--grey ml-3">
+      <span>Title</span>
+    </div>
+
     <header class="pdf-viewer__header box-shadow">
+
       <div class="pdf-preview-toggle">
-        <a @click.prevent.stop="togglePreview" class="icon"><PreviewIcon /></a>
+        <v-btn small flat @click.prevent.stop="togglePreview"><v-icon>fas fa-book-open</v-icon></v-btn>
       </div>
 
       <PDFZoom
@@ -137,8 +143,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1em;
   position: relative;
+  padding: 0rem;
   z-index: 99;
 }
 .header-item {

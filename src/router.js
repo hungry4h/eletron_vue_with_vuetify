@@ -27,7 +27,7 @@ export default new Router({
       component: Table
     },
     {
-      path: '/pdf',
+      path: '/pdf/:filename',
       name: 'pdf',
       component: Pdf
     },

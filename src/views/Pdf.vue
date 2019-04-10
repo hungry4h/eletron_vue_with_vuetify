@@ -1,7 +1,7 @@
 <template>
-  
-    <div class="pdfviewer">
-      <v-container wrap>
+
+    <div class="pdf-viewer">
+      <v-layout>
         <v-flex>
           <PDFViewer
             v-bind="{url}"
@@ -18,7 +18,7 @@
           
           </PDFViewer>
         </v-flex>
-      </v-container>
+      </v-layout>
     </div>
 
     
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      url: "/pdf.pdf",
+      //url: "",
       documentError: undefined,
       enableUploader: process.env.VUE_APP_UPLOAD_ENABLED === 'true',
     };
@@ -49,12 +49,17 @@ export default {
       this.documentError = e.text;
     },
   },
+  computed: {
+    url() {
+      return "/" + this.$route.params.filename
+    },
+  },
 }
 </script>
 
 <style>
-.pdfviewer {
-  background-color: blue;
+.pdf-viewer {
+  background-color: #73739e;
 }
 .container {
   padding:0;

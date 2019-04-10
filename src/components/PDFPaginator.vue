@@ -7,7 +7,7 @@
           min="1"
           :max="pageCount"
           type="number"
-        ><span class="slash">/</span><span class="ma-4 page-count">{{ pageCount }}</span>
+        ><span class="slash ma-3">/</span><span class="ma-4 page-count">{{ pageCount }}</span>
     </template>
     <input v-else type="number" />
   </div>
@@ -39,6 +39,7 @@ export default {
 <style scoped>
 input {
   background-color: aliceblue;
+  text-align: center;
 }
 .page-count, .slash {
   color: white;

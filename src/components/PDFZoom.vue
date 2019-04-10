@@ -1,9 +1,9 @@
 <template>
   <div class="pdf-zoom">
-    <v-btn small @click.prevent.stop="zoomIn" :disabled="isDisabled"><v-icon>fas fa-search-plus</v-icon></v-btn>
-    <v-btn small @click.prevent.stop="zoomOut" :disabled="isDisabled"><v-icon>fas fa-search-minus</v-icon></v-btn>
-    <v-btn small @click.prevent.stop="fitWidth" :disabled="isDisabled"><v-icon>fas fa-expand-arrows-alt</v-icon></v-btn>
-    <v-btn small @click.prevent.stop="fitAuto" :disabled="isDisabled"><v-icon>fas fa-compress-arrows-alt</v-icon></v-btn>
+    <v-btn small flat @click.prevent.stop="zoomIn" :disabled="isDisabled"><v-icon>fas fa-search-plus</v-icon></v-btn>
+    <v-btn small flat @click.prevent.stop="zoomOut" :disabled="isDisabled"><v-icon>fas fa-search-minus</v-icon></v-btn>
+    <v-btn small flat @click.prevent.stop="fitWidth" :disabled="isDisabled"><v-icon>fas fa-expand-arrows-alt</v-icon></v-btn>
+    <v-btn small flat @click.prevent.stop="fitAuto" :disabled="isDisabled"><v-icon>fas fa-compress-arrows-alt</v-icon></v-btn>
   </div>
 </template>
 
@@ -51,3 +51,7 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+</style>
